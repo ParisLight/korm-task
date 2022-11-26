@@ -6,7 +6,7 @@
         </div> 
     </div>
     <swiper class="mySwiper"
-        :slides-per-view="3.5"
+        :slides-per-view="2.5"
         :space-between="32"
         :set-wrapper-size="true"
         :navigation="{

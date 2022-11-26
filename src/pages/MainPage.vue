@@ -46,13 +46,13 @@
 		</div>
 	</section>
 	
-	<!-- <div ref="o" class="observer veterinar">
+	<div ref="o" class="observer veterinar">
 			<div class="veterinar-background">
 					<div class="veterinar-bg-wrapper container">
 						<div class="veterinar-bg"></div>
 					</div>
 				</div>
-			<div class="container">
+			<div class="container veterinar__container">
 				<div class="veterinar-back" >
 					<div class="veterinar-inner" >
 						<div class="veterinar-info">
@@ -63,12 +63,13 @@
 							</div>
 						</div>
 						<div class="veterinar-img" >
-							<img src="../assets/alexandra.png" alt="veterinar">
+							<img src="../assets/alexandra.png" class="alexandra-img" alt="veterinar">
+							<img src="../assets/alexandra-mob.png" class="alexandra-mob" alt="veterinar">
 						</div>
 					</div>
 				</div>
 			</div>
-	</div> -->
+	</div>
 </template>
 
 <script setup>
@@ -89,7 +90,7 @@ let currentWidth = 150;
 	background: #78BECE;
 	padding-top: 170px;
 	overflow: hidden;
-	// min-height: 1000px;
+	max-height: 1280px;
 	&-wrapper{
 		position: relative;	
 		padding-bottom: 400px;
@@ -192,19 +193,22 @@ let currentWidth = 150;
 .veterinar-background {
     position: absolute;
     top: 0;
-    width: 100%;
+    max-width: 1140px;
+	width: 100%;
     height: 100%;
     -webkit-box-flex: 0;
     display: flex;
     justify-content: center;
     overflow: hidden;
-	min-width: 1180px;	
+
+	// min-width: 1180px;	
 }
 .veterinar-bg-wrapper {
     position: relative;
     height: 100%;
-    width: 100%;
+    max-width: 1140px;
 	// max-width: 1180px;
+	width: 100%;
     -webkit-box-flex: 0;
     display: flex;
     justify-content: center;
@@ -213,9 +217,10 @@ let currentWidth = 150;
     position: absolute;
     background: #A597C4;
     height: 100%;
-    width: 100%;
-	min-width: 1180px;
-	max-width: 1830px;
+    max-width: 1140px;
+	width: 100%;
+	// min-width: 1180px;
+	// max-width: 1830px;
     border-radius: 30px 400px 400px 30px;
 }
 .veterinar{
@@ -257,6 +262,10 @@ let currentWidth = 150;
 		top: -215px;
 		z-index: 1
 	}
+}
+
+.alexandra-mob{
+	display: none;
 }
 
 .individual-diet{
@@ -306,7 +315,6 @@ let currentWidth = 150;
 		}
 
 		&-content{
-			// bottom: 700px;
 			position: relative;
 			bottom: 175px;
 		}
@@ -350,122 +358,85 @@ let currentWidth = 150;
 		}
 	}
 
-	.container {
-      width: calc(100% - 40px);
-    }
+	.veterinar{
+		max-height: 1250px;
+		display: flex;
+		flex-shrink: 1;
+		flex-grow: 1;
+		&__container{
+			border-radius: 30px 30px 400px 400px;
+			overflow: hidden;
+		}
+		&-inner{
+			flex-direction: column;
+			padding: 0;
+			border-radius: 30px 30px 400px 400px; 
+			overflow: hidden;
+		}
+
+		&-info{
+			padding: 30px;
+			flex-grow: 1;
+		}
+
+		&-bg{
+			
+			border-radius: 30px 30px 400px 400px; 	
+		}
+
+		&__btn{
+			display: none;
+		}
+
+		&-img{
+			position: relative;
+			right: 0;
+			// top: 0;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: -16%;
+		}
+	}
+
+
+	
+
+	.individual-diet{
+			font-size: 24px;
+	}
+	.adaptation{
+		font-size: 16px;
+	}
+
+	.alexandra-img{
+		display: none;
+	}
+	.alexandra-mob{
+		display: block;
+		margin: 0;
+		width: 100%;
+		height: 1200px;
+		object-fit: contain;
+
+	}
 }
+
 @media screen and (max-width: 920px){
 	.hero-wrapper{
-		max-height: 1500px;
+		padding-bottom: 0px;
+	}
+
+	.hero-dog-sale{
+		bottom: 23%;
+		right: 0%;
+		left: auto;
 	}
 }
 
-@media screen and (max-width: 900px){
-	.hero{
-		max-height: 1450px;
-	}
-
-	.choose-breed{
-		top: -200px;
-	}
-
+@media screen and (max-width: 700px){
 	.hero-dog-wrapper{
-		top: -10px;
+		top: -80px;
 	}
-}
-
-@media screen and (max-width: 810px){
-	.hero{
-		max-height: 1350px;
-	}
-	.hero-dog-wrapper{
-		top: -20px;
-	}
-}
-
-@media screen and (max-width: 750px){
-	.hero{
-		max-height: 1200px
-	}
-
-	.choose-breed{
-		top: -150px;
-	}
-
-	.hero-dog-wrapper{
-		top: -30px;
-	}
-}
-
-@media screen and (max-width: 640px){
-	.hero{
-		max-height: 1100px
-	}
-
-	.choose-breed{
-		top: -150px;
-	}
-
-	.hero-dog-wrapper{
-		top: -50px;
-	}
-}
-
-@media screen and (max-width: 570px){
-	.hero{
-		max-height: 1040px
-	}
-
-	.choose-breed{
-		top: -150px;
-	}
-}
-@media screen and (max-width: 520px){
-	// .hero{
-	// 	max-height: 1000px
-	// }
-
-	.hero-dog-wrapper{
-		top: -70px;
-	}
-
-	.choose-breed{
-		top: -145px;
-	}
-}
-
-@media screen and (max-width: 470px){
-	
-
-	.hero-dog-wrapper{
-		top: -70px;
-	}
-
-	.choose-breed{
-		top: -170px;
-	}
-}
-
-
-@media screen and (max-width: 450px){
-	.hero{
-		max-height: 900px;
-	}
-
-	.choose-breed{
-		top: -165px;
-	}
-
-	.hero-dog-wrapper{
-		top: -50px;
-	}
-}
-
-@media screen and (max-width: 330px){
-	.choose-breed{
-		top: -195px;
-	}
-	
 }
 </style>
 
