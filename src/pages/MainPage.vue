@@ -47,7 +47,7 @@
 	</section>
 	
 	<div ref="o" class="observer veterinar">
-			<div class="veterinar-background">
+		<div class="veterinar-background">
 					<div class="veterinar-bg-wrapper container">
 						<div class="veterinar-bg"></div>
 					</div>
@@ -58,17 +58,17 @@
 						<div class="veterinar-info">
 							<h3 class="individual-diet">Разработаем индивидуальный рацион под особенности вашего питомца</h3>
 							<span class="adaptation">И будем помогать с адаптацией к нему в течение месяца</span>
-							<div class="btn veterinar__btn">
-								<span class="veterinar-btn-text">Рассказать о собаке</span>
-							</div>
+						<div class="btn veterinar__btn">
+							<span class="veterinar-btn-text">Рассказать о собаке</span>
 						</div>
-						<div class="veterinar-img" >
-							<img src="../assets/alexandra.png" class="alexandra-img" alt="veterinar">
-							<img src="../assets/alexandra-mob.png" class="alexandra-mob" alt="veterinar">
-						</div>
+					</div>
+					<div class="veterinar-img" >
+						<img src="../assets/alexandra.png" class="alexandra-img" alt="veterinar">
+						<img src="../assets/alexandra-mob.png" class="alexandra-mob" alt="veterinar">
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 </template>
 
@@ -200,14 +200,11 @@ let currentWidth = 150;
     display: flex;
     justify-content: center;
     overflow: hidden;
-
-	// min-width: 1180px;	
 }
 .veterinar-bg-wrapper {
     position: relative;
     height: 100%;
     max-width: 1140px;
-	// max-width: 1180px;
 	width: 100%;
     -webkit-box-flex: 0;
     display: flex;
@@ -219,8 +216,6 @@ let currentWidth = 150;
     height: 100%;
     max-width: 1140px;
 	width: 100%;
-	// min-width: 1180px;
-	// max-width: 1830px;
     border-radius: 30px 400px 400px 30px;
 }
 .veterinar{
@@ -231,9 +226,6 @@ let currentWidth = 150;
     width: 100%;
 	
 	&-back{
-		// background: #A597C4;
-		// width: 100%;
-		// border-radius: 30px 400px 400px 30px;
 		z-index: 20;
 	}
 
@@ -359,7 +351,6 @@ let currentWidth = 150;
 	}
 
 	.veterinar{
-		max-height: 1250px;
 		display: flex;
 		flex-shrink: 1;
 		flex-grow: 1;
@@ -391,7 +382,7 @@ let currentWidth = 150;
 		&-img{
 			position: relative;
 			right: 0;
-			// top: 0;
+			top: 0;
 			margin-left: 0;
 			margin-right: 0;
 			margin-top: -16%;
@@ -406,6 +397,7 @@ let currentWidth = 150;
 	}
 	.adaptation{
 		font-size: 16px;
+		margin-bottom: 0;
 	}
 
 	.alexandra-img{
@@ -413,11 +405,8 @@ let currentWidth = 150;
 	}
 	.alexandra-mob{
 		display: block;
-		margin: 0;
 		width: 100%;
-		height: 1200px;
-		object-fit: contain;
-
+		height: 100%;
 	}
 }
 
