@@ -46,7 +46,7 @@
 		</div>
 	</section>
 	
-	<div ref="o" class="observer veterinar">
+	<!-- <div ref="o" class="observer veterinar">
 			<div class="veterinar-background">
 					<div class="veterinar-bg-wrapper container">
 						<div class="veterinar-bg"></div>
@@ -68,7 +68,7 @@
 					</div>
 				</div>
 			</div>
-	</div>
+	</div> -->
 </template>
 
 <script setup>
@@ -89,6 +89,7 @@ let currentWidth = 150;
 	background: #78BECE;
 	padding-top: 170px;
 	overflow: hidden;
+	// min-height: 1000px;
 	&-wrapper{
 		position: relative;	
 		padding-bottom: 400px;
@@ -367,11 +368,18 @@ let currentWidth = 150;
 	.choose-breed{
 		top: -200px;
 	}
+
+	.hero-dog-wrapper{
+		top: -10px;
+	}
 }
 
 @media screen and (max-width: 810px){
 	.hero{
 		max-height: 1350px;
+	}
+	.hero-dog-wrapper{
+		top: -20px;
 	}
 }
 
@@ -383,6 +391,10 @@ let currentWidth = 150;
 	.choose-breed{
 		top: -150px;
 	}
+
+	.hero-dog-wrapper{
+		top: -30px;
+	}
 }
 
 @media screen and (max-width: 640px){
@@ -393,16 +405,67 @@ let currentWidth = 150;
 	.choose-breed{
 		top: -150px;
 	}
+
+	.hero-dog-wrapper{
+		top: -50px;
+	}
 }
 
 @media screen and (max-width: 570px){
 	.hero{
-		max-height: 1000px
+		max-height: 1040px
 	}
 
 	.choose-breed{
-		top: -120px;
+		top: -150px;
 	}
+}
+@media screen and (max-width: 520px){
+	// .hero{
+	// 	max-height: 1000px
+	// }
+
+	.hero-dog-wrapper{
+		top: -70px;
+	}
+
+	.choose-breed{
+		top: -145px;
+	}
+}
+
+@media screen and (max-width: 470px){
+	
+
+	.hero-dog-wrapper{
+		top: -70px;
+	}
+
+	.choose-breed{
+		top: -170px;
+	}
+}
+
+
+@media screen and (max-width: 450px){
+	.hero{
+		max-height: 900px;
+	}
+
+	.choose-breed{
+		top: -165px;
+	}
+
+	.hero-dog-wrapper{
+		top: -50px;
+	}
+}
+
+@media screen and (max-width: 330px){
+	.choose-breed{
+		top: -195px;
+	}
+	
 }
 </style>
 
