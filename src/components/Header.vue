@@ -52,16 +52,27 @@ export default {
         background: rgba(255, 255, 255, 0.2);
         border-radius: 16px;
         padding: 17px 30px;
+        &:hover{
+            background: rgba(255, 255, 255, 0.5);
+            transition-duration: 0.5s;
+        }
+        
     }
 
     &-menu-mobile{
         display: none;
+        cursor: pointer;
     }
 }
 
 .link{
     text-decoration: none;
+    z-index: 999;
     cursor: pointer;
+   &:hover{
+        color: rgba(255, 255, 255, 0.5);
+        transition-duration: 0.5s;
+   }
 }
 
 @media screen and (max-width: 955px){ 

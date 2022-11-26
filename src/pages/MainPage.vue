@@ -21,7 +21,7 @@
 						</div>
 					</div>
 
-					<div class=" link btn hero__btn">
+					<div class="red-btn btn hero__btn">
 						<span class="hero-btn-text">Подобрать рацион</span>
 					</div>
 				</div>
@@ -58,13 +58,21 @@
 						<div class="veterinar-info">
 							<h3 class="individual-diet">Разработаем индивидуальный рацион под особенности вашего питомца</h3>
 							<span class="adaptation">И будем помогать с адаптацией к нему в течение месяца</span>
-						<div class="btn veterinar__btn">
+						<div class="btn red-btn veterinar__btn">
 							<span class="veterinar-btn-text">Рассказать о собаке</span>
 						</div>
 					</div>
 					<div class="veterinar-img" >
 						<img src="../assets/alexandra.png" class="alexandra-img" alt="veterinar">
 						<img src="../assets/alexandra-mob.png" class="alexandra-mob" alt="veterinar">
+					</div>
+					<div class="veterinar-name">
+						<div class="veterinar-name-content">
+							<span>Александра<br>Буланова</span>
+						</div>
+						<div class="veterinar-desc">
+							<span class="veterinar-desc-content">Ветеринар «Биоконтроль»</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -79,13 +87,21 @@ import { ref , onMounted} from 'vue';
 
 const useimgstore = useImgStore();
 
-const o = ref(null)
-let currentWidth = 150;
+// const o = ref(null)
 
+// onMounted(() => {
+// 	let options = {
+// 	rootMargin: '0px',
+// 	threshold: 0.4,
+// }
 
+// const observer = new IntersectionObserver(callback, options);
+// observer.observe(o.value);
+// })
 </script>
 
 <style lang="scss">
+
 .hero{
 	background: #78BECE;
 	padding-top: 170px;
@@ -102,7 +118,6 @@ let currentWidth = 150;
 
 	&-dog-wrapper{
 		position: absolute;
-		// width: 1115px;
 		top: -500px;
 		right: -320px;
 		z-index: 1;
@@ -148,6 +163,14 @@ let currentWidth = 150;
 	}
 
 }
+
+.red-btn{
+	&:hover{
+		background: #FF79A4;
+		transition-duration: 0.5s;
+	}
+}
+
 .choose-breed{
 	position: relative;
 	top: -300px;
@@ -182,6 +205,7 @@ let currentWidth = 150;
 	padding: 25px 30px;
 	z-index: 20;
 	cursor: pointer;
+	
 }
 
 .main-title{
@@ -196,7 +220,6 @@ let currentWidth = 150;
     max-width: 1140px;
 	width: 100%;
     height: 100%;
-    -webkit-box-flex: 0;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -206,7 +229,6 @@ let currentWidth = 150;
     height: 100%;
     max-width: 1140px;
 	width: 100%;
-    -webkit-box-flex: 0;
     display: flex;
     justify-content: center;
 }
@@ -253,6 +275,26 @@ let currentWidth = 150;
 		right: 145px;
 		top: -215px;
 		z-index: 1
+	}
+	&-name{
+		margin-right: 40px;
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		&-content{
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 120%;
+		}
+
+		
+	}
+	&-desc{
+		margin-top: 8px;
+		opacity: 0.6;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 130%;
 	}
 }
 
@@ -354,6 +396,7 @@ let currentWidth = 150;
 		display: flex;
 		flex-shrink: 1;
 		flex-grow: 1;
+		top: -200px;
 		&__container{
 			border-radius: 30px 30px 400px 400px;
 			overflow: hidden;
@@ -371,7 +414,6 @@ let currentWidth = 150;
 		}
 
 		&-bg{
-			
 			border-radius: 30px 30px 400px 400px; 	
 		}
 
@@ -387,10 +429,11 @@ let currentWidth = 150;
 			margin-right: 0;
 			margin-top: -16%;
 		}
+
+		&-name{
+			display: none;
+		}
 	}
-
-
-	
 
 	.individual-diet{
 			font-size: 24px;
