@@ -7,7 +7,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [vue()],
 
-  base: '/komkorm/',
+  base: '/korm-task/',
   css: {
     preprocessorOptions: {
       scss: {
