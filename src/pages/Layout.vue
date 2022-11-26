@@ -1,12 +1,6 @@
 <template>
-    
         <Header />
-            <div class="content">
-                <router-view />
-            </div>
-            
-       
-  
+        <router-view />
 </template>
 
 <script setup>

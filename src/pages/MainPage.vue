@@ -74,9 +74,18 @@
 							<span class="veterinar-desc-content">Ветеринар «Биоконтроль»</span>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
+		<div class="veterinar-name-mobile">
+						<div class="veterinar-name-mobile-content">
+							<span class="veterinar-name-text-mobile">Александра Буланова</span>
+						</div>
+						<div class="veterinar-desc-mobile">
+							<span class="veterinar-desc-mobile-content">Ветеринар «Биоконтроль»</span>
+						</div>
+					</div>
 	</div>
 </template>
 
@@ -286,7 +295,9 @@ const useimgstore = useImgStore();
 			font-size: 24px;
 			line-height: 120%;
 		}
-
+		&-mobile{
+			display: none;
+		}
 		
 	}
 	&-desc{
@@ -295,6 +306,10 @@ const useimgstore = useImgStore();
 		font-weight: 600;
 		font-size: 13px;
 		line-height: 130%;
+	}
+
+	&-name-mobile{
+
 	}
 }
 
@@ -432,6 +447,28 @@ const useimgstore = useImgStore();
 
 		&-name{
 			display: none;
+		}
+
+		&-name-mobile{
+			display: block;
+			text-align: center;
+			position: absolute;
+			top: calc(100% + 12px);
+			align-items: center;
+			
+			.veterinar-name-text-mobile{
+				color: #000000;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 120%;
+			}
+			.veterinar-desc-mobile-content{
+				font-weight: 600;
+				font-size: 12px;
+				line-height: 130%;
+				color: #000000;
+				opacity: 0.6;
+			}
 		}
 	}
 
