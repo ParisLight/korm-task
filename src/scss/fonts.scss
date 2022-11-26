@@ -1,0 +1,44 @@
+$MontserratLight:
+	300,
+	'Montserrat-Light.woff2',
+	'Montserrat-Light.woff',
+	'Montserrat-Light';
+
+$MontserratRegular:
+	400,
+	'Montserrat-Regular.woff2',
+	'Montserrat-Regular.woff',
+	'Montserrat-Regular';
+
+$MontserratMedium:
+	500,
+	'Montserrat-Medium.woff2',
+	'Montserrat-Medium.woff',
+	'Montserrat-Medium';
+
+$MontserratSemiBold:
+	600,
+	'Montserrat-SemiBold.woff2',
+	'Montserrat-SemiBold.woff',
+	'Montserrat-SemiBold';
+
+$MontserratBold: 
+	700,
+	'Montserrat-Bold.woff2',
+	'Montserrat-Bold.woff',
+	'Montserrat-Bold';
+
+@each $weight, $woff2, $woff, $local in
+$MontserratLight, $MontserratRegular, $MontserratMedium, $MontserratSemiBold,$MontserratBold {
+	@font-face {
+		font-family: 'Montserrat';
+		font-weight: $weight;
+		font-style: normal;
+		src: local($local),
+		url('../fonts/#{$woff2}') format('woff2'),
+		url('../fonts/#{$woff}') format('woff');
+		font-display: swap;
+	}
+}
+
+

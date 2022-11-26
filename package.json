@@ -1,0 +1,24 @@
+{
+  "name": "newapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "intersection-observer": "^0.12.2",
+    "pinia": "^2.0.23",
+    "swiper": "^8.4.5",
+    "vue": "^3.2.36",
+    "vue-intersection-observer": "^0.1.9",
+    "vue-router": "^4.1.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "sass": "^1.56.1",
+    "vite": "^3.2.4"
+  }
+}
