@@ -4,7 +4,7 @@ export default createRouter({
 	history: createWebHashHistory(),
 	routes: [
 		{
-			path: '/', 
+			path: '/Main', 
 			component: () => import('@/pages/Layout.vue'),
 			children: [
 				{

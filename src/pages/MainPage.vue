@@ -44,7 +44,6 @@
 		<div class="choose-bread__slider">
 			<Slider :imgArray="useimgstore.dogs"/>
 		</div>
-		
 	</section>
 	
 	<div ref="o" class="observer veterinar">
